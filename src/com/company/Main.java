@@ -1,9 +1,10 @@
 package com.company;
-
+import com.company.familia.Sebas;
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello Profes");
+        Sebas bello = new Sebas();
+        System.out.println("Hola Profes, muchas gracias por la ayuda");
     }
 }
