@@ -5,7 +5,7 @@ public class Martin {
     private int age;
     private String hobby;
 
-    public Martin(String saludo){
+    public Martin(String saludo, int age, String hobby){
         this.age = 55;
         this.hobby = "leer";
 

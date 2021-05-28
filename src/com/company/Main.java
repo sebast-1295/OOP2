@@ -5,8 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Sebas bello = new Sebas();
-        Martin papa = new Martin( "Hola");
+        Sebas bello = new Sebas("saludo", 55, "leer");
+        Martin papa = new Martin( "Hola", 55, "leer");
 
         papa.setAge();
         System.out.println(papa.getAge());
