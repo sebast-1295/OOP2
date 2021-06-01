@@ -1,23 +1,31 @@
 package com.company.vacunacion;
 
+
 import java.util.Date;
+import java.util.List;
 
 public class BitacoradeVacunas {
+
     private Persona persona;
     private String marca;
     private Date fecha;
 
     public BitacoradeVacunas (Persona persona, String marca, Date fecha) {
-    }
-    public Persona getPersona() {
-        return persona;
+        this.persona = persona;
+        this.marca = marca;
+        this.fecha = fecha;
+
     }
 
-    public String getMarca() {
-        return marca;
-    }
+        public Persona getPersona () {
+            return persona;
+        }
 
-    public Date getFecha() {
-        return fecha;
-    }
+        public String getMarca () {
+            return marca;
+        }
+
+        public Date getFecha () {
+            return fecha;
+        }
 }

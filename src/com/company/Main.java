@@ -1,18 +1,23 @@
 package com.company;
-import com.company.familia.*;
+import com.company.vacunacion.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Sebas bello = new Sebas("saludo", 55, "leer");
-        Martin papa = new Martin( "Hola", 55, "leer");
+        Familiar papa = new Familiar ("Martin", "12345", 55, false,"Papa");
+        Familiar mama = new Familiar ("Edith", "9876", 60, true, "mama");
 
-        papa.setAge();
-        System.out.println(papa.getAge());
-        System.out.println(papa.getHobby());
+        List <Persona> familia = new ArrayList<>();
+        familia.add(papa);
+        familia.add(mama);
 
-        System.out.println("Hola Profes, muchas gracias por la ayuda");
+        List<BitacoradeVacunas> bitacora = new ArrayList <>();
+        bitacora.add (new BitacoradeVacunas(papa, "Pzifer", new Date()));
+        bitacora.add (new BitacoradeVacunas(mama, "Pzifer", new Date()));
     }
 
 
