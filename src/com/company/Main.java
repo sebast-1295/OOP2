@@ -1,5 +1,8 @@
 package com.company;
-import com.company.vacunacion.*;
+import com.company.vacunacion.entities.BitacoradeVacunas;
+import com.company.vacunacion.entities.Familiar;
+import com.company.vacunacion.entities.Persona;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.company.vacunacion;
+package com.company.vacunacion.entities;
 
 public class Familiar extends Persona {
     private String parentesco;

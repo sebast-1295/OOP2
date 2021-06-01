@@ -1,8 +1,7 @@
-package com.company.vacunacion;
+package com.company.vacunacion.entities;
 
 
 import java.util.Date;
-import java.util.List;
 
 public class BitacoradeVacunas {
 
