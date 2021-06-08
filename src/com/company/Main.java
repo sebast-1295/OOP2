@@ -1,4 +1,5 @@
 package com.company;
+import com.company.repositories.InMemoryRepository;
 import com.company.vacunacion.entities.Amigo;
 import com.company.vacunacion.entities.BitacoradeVacunas;
 import com.company.vacunacion.entities.Familiar;
@@ -16,11 +17,11 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        List<BitacoradeVacunas> bitacora = new ArrayList<>();
+        InMemoryRepository repo = new InMemoryRepository();
 
         while (true) {
             System.out.println("Ingrese algun dato");
-            String nombre, cedula, edad, riesgo, isAmigo, relacion, facebook, parentesco, marca;
+            String nombre, cedula, edad, riesgo, isAmigo, relacion, facebook, parentesco, marca, print;
             Persona persona;
             System.out.println("Nombre:");
             nombre = in.nextLine();
@@ -46,7 +47,14 @@ public class Main {
             System.out.println("Vacuna - Marca:");
             marca = in.nextLine();
 
-            bitacora.add( new BitacoradeVacunas(persona, marca, new Date()));
+            repo.save(persona, marca, new Date());
+            System.out.println("Quieres imprimir la Lista? (Si)");
+            print = in.nextLine();
+                if (print.equals("Si")){
+                    for (String item: repo.get()){
+                        System.out.println(item);
+                    }
+                }
 
         }
     }
