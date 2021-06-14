@@ -1,4 +1,4 @@
-package com.company.repositories;
+package com.company.vacunacion.repositories;
 
 import com.company.vacunacion.entities.BitacoradeVacunas;
 import com.company.vacunacion.entities.Persona;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
-public class InMemoryRepository {
+public class InMemoryRepository implements Repository {
     private List<BitacoradeVacunas> bitacora;
 
     public InMemoryRepository() {
