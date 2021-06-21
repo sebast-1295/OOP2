@@ -13,7 +13,7 @@ public class FileRepository implements Repository {
 
     @Override
     public void save(Persona persona, String marca, Date fecha) {
-        SimpleDateFormat format = new SimpleDateFormat("dd-mm-yy hh:nn:ss");
+        SimpleDateFormat format = new SimpleDateFormat("dd-mm-yy hh:mm:ss");
 
         String text = persona.getNombre() + " " + marca + " " + format.format(fecha) + "\n";
         try {

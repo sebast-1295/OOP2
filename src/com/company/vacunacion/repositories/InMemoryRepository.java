@@ -9,20 +9,20 @@ import java.util.List;
 import java.util.Date;
 
 public class InMemoryRepository implements Repository {
-    private List<BitacoradeVacunas> bitacora;
+    private final List<BitacoradeVacunas> db;
 
     public InMemoryRepository() {
-        this.bitacora = new ArrayList<>();
+        this.db = new ArrayList<>();
     }
 
     public void save (Persona persona, String marca, Date fecha){
-        this.bitacora.add(new BitacoradeVacunas(persona, marca, fecha));
+        this.db.add(new BitacoradeVacunas(persona, marca, fecha));
     }
 
     public List<String> get(){
         List<String> lines = new ArrayList<>();
         SimpleDateFormat format = new SimpleDateFormat( "DD-MM-YY");
-        for (BitacoradeVacunas item: bitacora) {
+        for (BitacoradeVacunas item: db) {
             lines.add(item.getPersona().getNombre()
             + "-" + item.getMarca()
             + "-" + format.format(item.getFecha()));
