@@ -5,8 +5,8 @@ public class Amigo extends Persona {
     private String relacion;
     private String facebook;
 
-    public Amigo(String nombre, String cedula, int age, boolean riesgo, String relacion, String facebook) {
-        super(nombre, cedula, age, riesgo);
+    public Amigo(String nombre, String cedula, int edad, boolean riesgo, String relacion, String facebook) {
+        super(nombre, cedula, edad, riesgo);
         this.relacion = relacion;
         this.facebook = facebook;
     }
@@ -17,4 +17,9 @@ public class Amigo extends Persona {
     public String getFacebook() {
         return facebook;
     }
+
+    public void setRelacion() {
+        this.relacion = relacion;
+    }
+
 }
